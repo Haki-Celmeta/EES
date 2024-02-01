@@ -76,9 +76,13 @@ nav ul {
 
   a {
     transition: 0.2s;
+    border: 1px solid black;
+    padding: 0.5rem 1.5rem;
+    border-radius: 32px;
   }
 
   a:hover {
-    color: $rosewood-color;
+    background-color: $rosewood-color;
+    color: $lavender-blush-color;
   }
 }

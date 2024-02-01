@@ -1,0 +1,19 @@
+@import "../../assets/styles/variables";
+@import "../../assets/styles/mixins";
+
+.hero-section-container {
+  @include displayFlexCenter(column);
+  background: url("../../assets/images/cctv-background.jpg") center/cover;
+  height: 100vh;
+  gap: 2rem;
+
+  h1 {
+    font-size: $h1-size;
+    font-weight: 600;
+    color: $lavender-blush-color;
+  }
+
+  a {
+    @include button(1.25rem, $lavender-blush-color, black);
+  }
+}
