@@ -1,0 +1,79 @@
+@import "../../assets/styles/variables";
+@import "../../assets/styles/mixins";
+
+.images-contrast-container {
+  width: 100%;
+  @include displayFlex(column);
+
+  .cctv-container {
+    width: 100%;
+    @include displayFlex(row);
+    background-color: $lavender-blush-color;
+
+    #dome-outdoor {
+      width: 100%;
+      height: 540px;
+      object-fit: cover;
+    }
+
+    img {
+      width: 50%;
+      object-fit: cover;
+    }
+
+    .bullet-cctv-hover:hover {      
+      .bullet-hover {
+        opacity: 0;
+      }
+
+      #bullet-hover-link {
+        opacity: 1;
+      }
+    }
+
+    .dome-cctv-hover:hover {      
+      .dome-hover {
+        opacity: 0;
+      }
+
+      #dome-hover-link {
+        opacity: 1;
+      }
+    }
+
+    .cctv-hover {
+      @include displayFlexCenter(column);
+      width: 100%;
+      cursor: pointer;
+
+      div {
+        @include displayFlex(column);
+        align-items: center;
+        position: relative;
+        width: 100%;
+
+        h3 {
+          font-size: 2rem;
+          font-weight: 600;
+          opacity: 1;
+        }
+
+        h4 {
+          font-size: 1.1rem;
+          letter-spacing: 3px;
+          color: $vermilion-color;
+          opacity: 1;
+        }
+
+        a {
+          opacity: 0;
+          width: 50%;
+          @include button(1.5rem, $rosewood-color, white);
+          position: absolute;
+          top: 0;
+          text-align: center;
+        }
+      }
+    }
+  }
+}

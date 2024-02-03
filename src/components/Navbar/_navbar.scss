@@ -1,10 +1,23 @@
 @import "../../assets/styles/variables";
 @import "../../assets/styles/mixins";
 
-.navbar-container {
+#navbar-container {
   @include displayFlex(column);
   background-color: $lavender-blush-color;
   padding-bottom: 2rem;
+  position: fixed;
+  width: 100%;
+  z-index: 999;
+  transition: 0.4s;
+  top: 0;
+}
+
+#navbar-container.hidden {
+  top: -200px;
+}
+
+#navbar-container.visible {
+  top: 0;
 }
 
 .user-info {

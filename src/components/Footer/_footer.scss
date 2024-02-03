@@ -1,0 +1,56 @@
+@import "../../assets/styles/variables";
+@import "../../assets/styles/mixins";
+
+footer {
+  @include displayFlex(row);
+  justify-content: space-around;
+  padding: 10rem 0rem;
+
+  .logo {
+    font-size: 3rem;
+    color: $rosewood-color;
+  }
+
+  .footer-child {
+    @include displayFlex(column);
+    align-items: center;
+    gap: 2.5rem;
+    font-size: 1.2rem;
+
+    a {
+      transition: 0.2s;
+    }
+
+    a:hover {
+      color: rgb(62, 153, 118);
+    }
+  }
+
+  .join-us-container {
+    h3 {
+      font-size: 2.5rem;
+      font-weight: 600;
+    }
+
+    a {
+      width: 100%;
+      text-align: center;
+      @include button(1.25rem, $rosewood-color, #fff);
+      padding: 1rem 2.75rem;
+    }
+  }
+
+  .input-email-container {
+    @include displayFlex(column);
+
+    label {
+      font-weight: 600;
+    }
+
+    input {
+      border-bottom: 4px solid $rosewood-color;
+      padding: 0.5rem 0rem;
+      outline: none;
+    }
+  }
+}

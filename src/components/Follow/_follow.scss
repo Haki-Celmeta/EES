@@ -1,0 +1,52 @@
+@import "../../assets/styles/variables";
+@import "../../assets/styles/mixins";
+
+.follow-instagram-section {
+  @include displayFlex(column);
+  padding: 4rem 0rem;
+  background-color: $lavender-blush-color;
+}
+
+.first-part {
+  @include displayFlexCenter(column);
+  padding: 4rem 0rem;
+
+  h2 {
+    font-size: 2rem;
+  }
+
+  a {
+    font-size: 1.2rem;
+    color: $rosewood-color;
+    margin-top: 1rem;
+    text-decoration: underline
+  }
+}
+
+.second-part {
+  @include displayFlex(row);
+  border: 1px solid black;
+
+  img {
+    width: 20%;
+    object-fit: cover;
+  }
+}
+
+.third-part {
+  @include displayFlex(row);
+  justify-content: space-evenly;
+  margin-top: 3rem;
+
+  .quality {
+    @include displayFlex(column);
+    align-items: center;
+
+    h3 {
+      font-size: 1.5rem;
+      font-weight: 500;
+      color: $licorice-color;
+      margin-top: 1rem;
+    }
+  }
+}
