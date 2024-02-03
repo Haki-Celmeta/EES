@@ -21,6 +21,28 @@
 .best-selling.cameras-container {
   @include displayFlex(row);
   gap: 1rem;
+
+  .move-buttons {
+    @include displayFlex(row);
+    align-items: center;
+    justify-content: center;
+    width: 50px;
+    cursor: pointer;
+    background-color: rgb(233, 233, 233);
+    transition: opacity 0.2s, background-color 0.4s;
+
+    img {
+      width: 40px;
+    }
+  }
+
+  .move-buttons:disabled {
+    background-color: rgb(255, 162, 162);
+  }
+
+  .move-buttons:active {
+    opacity: 0.5;
+  }
 }
 
 .product-card {
