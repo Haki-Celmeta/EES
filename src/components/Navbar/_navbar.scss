@@ -3,7 +3,7 @@
 
 #navbar-container {
   @include displayFlex(column);
-  background-color: $lavender-blush-color;
+  background-color: rgba($color: #F6E8EA, $alpha: 0.8);
   padding-bottom: 2rem;
   position: fixed;
   width: 100%;
@@ -25,26 +25,6 @@
   justify-content: space-between;
   align-items: center;
   padding: 2rem 4rem;
-
-  .search-bar-container {
-    @include displayFlex(row);
-    align-items: center;
-    min-width: 300px;
-    font-size: 1.1rem;
-    padding: 0.5rem;
-    border-bottom: 1px solid black;
-    background-color: transparent;
-
-    img {
-      width: 25px;
-    }
-
-    #search-bar {
-      padding: 0rem 1rem;
-      background-color: transparent;
-      outline: none;
-    }
-  }
 
   h1 {
     font-size: 3rem;
@@ -81,6 +61,26 @@
   }
 }
 
+.search-bar-container {
+  @include displayFlex(row);
+  align-items: center;
+  min-width: 300px;
+  font-size: 1.1rem;
+  padding: 0.5rem;
+  border-bottom: 1px solid black;
+  background-color: transparent;
+
+  img {
+    width: 25px;
+  }
+
+  #search-bar {
+    padding: 0rem 1rem;
+    background-color: transparent;
+    outline: none;
+  }
+}
+
 nav ul {
   @include displayFlex(row);
   justify-content: space-evenly;
@@ -97,5 +97,94 @@ nav ul {
   a:hover {
     background-color: $rosewood-color;
     color: $lavender-blush-color;
+  }
+}
+
+.mobile-navbar {
+  position: absolute;
+  width: 100vw;
+  height: 100vh;
+  @include displayFlex(column);
+  justify-content: center;
+  align-items: center;
+  background-color: #fff;
+  display: none;
+
+  #close-button {
+    width: 40px;
+    position: absolute;
+    top: 5%;
+    right: 10%;
+    cursor: pointer;
+  }
+
+  .search-bar-container {
+    margin-bottom: 3rem;
+  }
+  
+  nav ul {
+    @include displayFlex(column);
+    align-items: center;
+    gap: 2rem;
+     
+    a {
+      border: none;
+      font-size: 1.5rem;
+    }
+  }
+}
+
+#hamburger-menu {
+  width: 40px;
+  cursor: pointer;
+} 
+
+.hamburger-menu-container {
+  @include displayFlex(row);
+  justify-content: space-between;
+  align-items: center;
+  display: none;
+  padding: 0.5rem 2rem;
+
+  span {
+    font-size: 1.5rem;
+    font-weight: 600;
+  }
+}
+
+@media (max-width: 830px) {
+  nav {
+    display: none;
+  }
+
+  .mobile-navbar nav {
+    display: flex;
+  }
+
+  .hamburger-menu-container {
+    display: flex;
+    order: 0;
+  }
+
+  .search-bar-container {
+    display: none;
+  }
+
+  .mobile-navbar .search-bar-container {
+    display: flex;
+  }
+
+  .user-info {
+    order: 1;
+    justify-content: center;
+    padding: 0.5rem 0rem;
+
+    .user-info-container {
+      display: none;
+    }
+  }
+
+  #navbar-container {
+    padding-bottom: 0;
   }
 }

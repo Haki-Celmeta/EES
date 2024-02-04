@@ -38,3 +38,29 @@
     }
   }
 }
+
+@media (max-width: 1200px) {
+  .three-part-container {
+    @include displayFlex(column);
+    align-items: center;
+    gap: 2rem;
+
+    .single-card {
+      width: 500px;
+    }
+  }
+}
+
+@media (max-width: 450px) {
+  .three-part-container {
+    padding: 2rem 0rem;
+  }
+
+  .three-part-container .single-card {
+    width: 100%;
+
+    h3 {
+      text-align: center;
+    }
+  }
+}

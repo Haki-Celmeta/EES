@@ -17,3 +17,9 @@
     @include button(1.25rem, $lavender-blush-color, black);
   }
 }
+
+@media (max-width: 830px) {
+  .hero-section-container h1 {
+    text-align: center;
+  }
+}

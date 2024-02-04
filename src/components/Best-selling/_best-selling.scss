@@ -89,3 +89,9 @@
     background-color: $rosewood-color;
   }
 }
+
+@media (max-width: 450px) {
+  .best-selling-container > h2 {
+    text-align: center;
+  }
+}

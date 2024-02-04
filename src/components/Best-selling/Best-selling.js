@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import cameras from "../Data/cameras";
 import ProductCard from "./Product-card";
 import { Link } from "react-router-dom";
@@ -10,21 +10,33 @@ const BestSelling = () => {
   const [lastIndex, setLastIndex] = useState(3);
   const [firstIndex, setFirstIndex] = useState(0);
 
-  function handleIncreateIndex() {
+  const breakpoint = 800;
+
+  useEffect(() => {
+    function handleWindowResize() {
+      const windowWidth = window.innerWidth;
+      const cardsPerRow = windowWidth < breakpoint ? 1 : 4;
+      setLastIndex(firstIndex + cardsPerRow - 1);
+    }
+
+    window.addEventListener('resize', handleWindowResize);
+
+    return () => {
+      window.removeEventListener('resize', handleWindowResize);
+    }
+  }, [firstIndex, breakpoint])
+
+  function handleIncreaseIndex() {
     if (cameras.length - 1 > lastIndex) {
-      setLastIndex(() => lastIndex + 1);
-      setFirstIndex(() => firstIndex + 1);
-    } else {
-      return;
+      setFirstIndex((prevFirstIndex) => prevFirstIndex + 1);
+      setLastIndex((prevLastIndex) => prevLastIndex + 1);
     }
   }
 
   function handleDecreaseIndex() {
-    if (lastIndex > 3) {
-      setLastIndex(() => lastIndex - 1);
-      setFirstIndex(() => firstIndex - 1);
-    } else {
-      return;
+    if (firstIndex > 0) {
+      setFirstIndex((prevFirstIndex) => prevFirstIndex - 1);
+      setLastIndex((prevLastIndex) => prevLastIndex - 1);
     }
   }
 
@@ -42,7 +54,7 @@ const BestSelling = () => {
             <ProductCard key={id} name={name} price={price} megapixel={megapixel} imagesSrc={imageSrc} />
           ))
         }
-        <button className="move-buttons increase-button" onClick={handleIncreateIndex} disabled={lastIndex === cameras.length - 1 ? true : false}>
+        <button className="move-buttons increase-button" onClick={handleIncreaseIndex} disabled={lastIndex === cameras.length - 1 ? true : false}>
           <img src={arrowRight} alt="arrow left" />
         </button>
       </div>
