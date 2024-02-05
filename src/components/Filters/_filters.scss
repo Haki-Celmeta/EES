@@ -1,0 +1,84 @@
+@import "../../assets/styles/variables";
+@import "../../assets/styles/mixins";
+
+.all-products-filter {
+  padding: 2rem;
+  margin-top: $margin-top-size;
+
+  h2 {
+    font-size: 2rem;
+    padding-bottom: 1rem;
+    border-bottom: 1px solid grey;
+  }
+}
+
+.slide-container {
+  padding-top: 1rem;
+
+  .slider {
+    -webkit-appearance: none;
+    height: 3px;
+    background: black;
+    outline: none;
+    -webkit-transition: .2s;
+    transition: opacity .2s;
+    width: 100px;
+  }
+
+  .slider::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 20px;
+    height: 20px;
+    background: $vermilion-color;
+    border-radius: 50%;
+    cursor: pointer;
+  }
+  
+  .slider::-moz-range-thumb {
+    width: 20px;
+    height: 20px;
+    background: #04AA6D;
+    cursor: pointer;
+  }
+}
+
+.price-slide-container {
+  @include displayFlex(row);
+  width: 210px;
+  justify-content: space-between;
+  color: rgb(68, 68, 68);
+
+  h3 {
+    margin-top: 0.5rem;
+  }
+}
+
+.filter-products {
+  @include displayFlex(column);
+  gap: 1rem;
+  margin-top: 2rem;
+
+  .check-container {
+    @include displayFlex(row);
+    align-items: center;
+    gap: 1rem;
+    font-size: 1.25rem;
+    color: rgb(68, 68, 68);
+
+    input {
+      width: 20px;
+      height: 20px;
+      accent-color: $vermilion-color;
+      cursor: pointer;
+    }
+
+    label {
+      cursor: pointer;
+    }
+  }
+}
+
+.filter-products-container {
+  @include displayFlex(row);
+}

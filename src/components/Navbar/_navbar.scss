@@ -3,7 +3,7 @@
 
 #navbar-container {
   @include displayFlex(column);
-  background-color: rgba($color: #F6E8EA, $alpha: 0.8);
+  background-color: rgba($color: #F6E8EA, $alpha: 1);
   padding-bottom: 2rem;
   position: fixed;
   width: 100%;

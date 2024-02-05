@@ -1,0 +1,61 @@
+@import "../../assets/styles/variables";
+@import "../../assets/styles/mixins";
+
+.all-products-container {
+  @include displayFlex(column);
+  margin-top: $margin-top-size;
+  margin-left: 2rem;
+
+  h1 {
+    font-size: 2.5rem;
+    font-weight: 700;
+  }
+
+  .counter-sort-container {
+    @include displayFlex(row);
+    justify-content: space-between;
+    padding: 1rem 2rem;
+    font-size: 1.2rem;
+
+    .counter {
+      color: grey;
+    }
+  }
+}
+
+.products-container {
+  @include displayFlex(row);
+  flex-wrap: wrap;
+  gap: 2rem;
+}
+
+.single-product {
+  @include displayFlex(column);
+  gap: 1rem;
+  background-color: rgb(242, 242, 242);
+  border-radius: 16px;
+  padding: 1rem;
+  cursor: pointer;
+
+  img {
+    border-radius: 16px;
+    width: 350px;
+  }
+
+  .product-name-price-container {
+    @include displayFlex(column);
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    padding: 1rem 0rem;
+
+    .product-name {
+      font-size: 1.2rem;
+    }
+
+    .product-price {
+      color: $rosewood-color;
+      font-size: 1.5rem;
+    }
+  }
+}
