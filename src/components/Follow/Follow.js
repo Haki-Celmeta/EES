@@ -31,7 +31,7 @@ const FollowInstagram = () => {
         </div>
         <div className="quality">
           <div className="w-8 h-1 bg-black"></div>
-          <h3>Motinor 24/7</h3>
+          <h3>Monitor 24/7</h3>
         </div>
       </div>
     </section>

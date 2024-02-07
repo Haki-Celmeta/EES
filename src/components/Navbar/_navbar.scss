@@ -10,6 +10,11 @@
   z-index: 999;
   transition: 0.4s;
   top: 0;
+
+  .active-link {
+    background-color: $rosewood-color;
+    color: $lavender-blush-color;
+  }
 }
 
 #navbar-container.hidden {

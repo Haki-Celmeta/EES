@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import UserInfo from "./navbarJavascripts/userInfo";
 import Links from "./navbarJavascripts/links";
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 import searchIcon from "../../assets/images/search.svg";
 import burgerMenu from "../../assets/images/burger-menu.svg";
 import closeIcon from "../../assets/images/close-icon.svg";
@@ -12,6 +12,8 @@ const Navbar = () => {
   const [visible, setVisible] = useState(true)
 
   const [isNavOpen, setIsNavOpen] = useState(false);
+
+  const location = useLocation();
 
   function handleClick() {
     setIsNavOpen(!isNavOpen);
@@ -44,11 +46,11 @@ const Navbar = () => {
         </div>
         <nav>
           <ul>
-            <li><Link to="/">Home</Link></li>
-            <li><Link to="/shop">Shop All</Link></li>
-            <li><Link to="/about">About Us</Link></li>
-            <li><Link to="/process">Process</Link></li>
-            <li><Link to="/contact">Contact</Link></li>
+            <li><Link to="/" className={location.pathname === "/" ? "active-link" : "nav-link"}>Home</Link></li>
+            <li><Link to="/shop" className={location.pathname === "/shop" ? "active-link" : "nav-link"}>Shop All</Link></li>
+            <li><Link to="/about" className={location.pathname === "/about" ? "active-link" : "nav-link"}>About Us</Link></li>
+            <li><Link to="/process" className={location.pathname === "/process" ? "active-link" : "nav-link"}>Process</Link></li>
+            <li><Link to="/contact" className={location.pathname === "/contact" ? "active-link" : "nav-link"}>Contact</Link></li>
           </ul>
         </nav>
       </div>

@@ -7,10 +7,10 @@ const Footer = () => {
     <footer>
       <div className="logo">EES.</div>
       <div className="page-links footer-child">
+        <Link to="/">Home</Link>
         <Link to="/shop">Shop All</Link>
-        <Link to="/about">Our Story</Link>
-        <Link to="/craft">Our Craft</Link>
-        <Link to="/giftCard">Gift Card</Link>
+        <Link to="/about">About Us</Link>
+        <Link to="/process">Process</Link>
         <Link to="/contact">Contact</Link>
       </div>
       <div className="other-things-container footer-child">

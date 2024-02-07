@@ -1,8 +1,9 @@
 const cameras = [
   {
     id: 1,
+    type: "camera",
     name: "SD2A200HB-GN-A-PV-S2",
-    price: 15840.00,
+    price: 15840,
     megapixel: 2,
     distance: 50,
     isHumanDetection: true,
@@ -11,8 +12,9 @@ const cameras = [
   },
   {
     id: 2,
+    type: "camera",
     name: "SD49825GB-HNR",
-    price: 108900.00,
+    price: 108900,
     megapixel: 8,
     distance: 100,
     isHumanDetection: true,
@@ -21,8 +23,9 @@ const cameras = [
   },
   {
     id: 3,
+    type: "camera",
     name: "SD3E405DB-GNY-A-PV1",
-    price: 43560.00,
+    price: 43560,
     megapixel: 4,
     distance: 50,
     isHumanDetection: true,
@@ -31,8 +34,9 @@ const cameras = [
   },
   {
     id: 4,
+    type: "camera",
     name: "HAC-HDW1500TLM-IL-A",
-    price: 6930.00,
+    price: 6930,
     megapixel: 5,
     distance: 20,
     isHumanDetection: false,
@@ -41,8 +45,9 @@ const cameras = [
   },
   {
     id: 5,
+    type: "camera",
     name: "HFW1500TLM-IL-A",
-    price: 6930.00,
+    price: 6930,
     megapixel: 5,
     distance: 40,
     isHumanDetection: false,
@@ -51,8 +56,9 @@ const cameras = [
   },
   {
     id: 6,
+    type: "camera",
     name: "DH-IPC-HFW3241DF-AS-4G",
-    price: 29700.00,
+    price: 29700,
     megapixel: 2,
     distance: 50,
     isHumanDetection: true,
