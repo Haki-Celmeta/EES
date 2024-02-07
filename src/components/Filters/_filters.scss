@@ -80,5 +80,53 @@
 }
 
 .filter-products-container {
+  padding: 2rem 0rem;
   @include displayFlex(row);
+
+  #filter-icon {
+    display: none;
+  }
+}
+
+@media (max-width: 600px) {
+  .filter-products-container {
+    flex-direction: column;
+
+    .all-products-filter {
+      @include displayFlex(column);
+      margin-top: 6rem;
+
+      h2 {
+        border-bottom: none;
+      }
+
+      #filter-icon {
+        position: absolute;
+        display: block;
+        right: 5%;
+        transition: 0.2s;
+      }
+
+      #filter-icon:hover {
+        background-color: $vermilion-color;
+      }
+    }
+
+    .all-products-container {
+      margin: 0;
+
+      h1 {
+        text-align: center;
+      }
+
+      .products-container {
+        justify-content: center;
+        align-items: center;
+      }
+    }
+  }
+
+  .mobile-filter-container {
+    @include displayFlexCenter(column);
+  }
 }

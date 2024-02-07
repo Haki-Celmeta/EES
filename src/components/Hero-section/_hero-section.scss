@@ -1,12 +1,16 @@
 @import "../../assets/styles/variables";
 @import "../../assets/styles/mixins";
 
+.hero-section {
+  background-color: rgb(138, 138, 138); 
+  padding-top: 9rem;
+}
+
 .hero-section-container {
   @include displayFlexCenter(column);
   background: url("../../assets/images/cctv-background.jpg") center/cover;
   height: 100vh;
   gap: 2rem;
-  margin-top: 9rem;
 
   h1 {
     font-size: $h1-size;

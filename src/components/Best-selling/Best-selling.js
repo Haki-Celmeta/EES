@@ -19,6 +19,8 @@ const BestSelling = () => {
       setLastIndex(firstIndex + cardsPerRow - 1);
     }
 
+    handleWindowResize();
+
     window.addEventListener('resize', handleWindowResize);
 
     return () => {

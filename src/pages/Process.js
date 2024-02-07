@@ -1,18 +1,18 @@
 import React from "react";
 import Navbar from "../components/Navbar/Navbar";
-import AboutUs from "../components/About-us/About-us";
+import ProcessSteps from "../components/Process/Process-steps";
 import Footer from "../components/Footer/Footer";
 import Copyright from "../components/Copyright/Copyright";
 
-const About = () => {
+const Process = () => {
   return (
-    <div className="about-us-container">
+    <div className="Process-container">
       <Navbar />
-      <AboutUs />
+      <ProcessSteps />
       <Footer />
       <Copyright />
     </div>
   )
 }
 
-export default About;
+export default Process
