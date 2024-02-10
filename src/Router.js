@@ -5,6 +5,8 @@ import Shop from "./pages/Shop";
 import About from "./pages/About";
 import Process from "./pages/Process";
 import Contact from "./pages/Contact";
+import Product from "./pages/Product";
+import ViewCart from "./pages/ViewCart";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 
 const Router = () => {
@@ -29,6 +31,14 @@ const Router = () => {
     {
       path: "/contact",
       element: <Contact />
+    },
+    {
+      path: "/shop/:name",
+      element: <Product />
+    },
+    {
+      path: "/cart",
+      element: <ViewCart />
     }
   ])
 

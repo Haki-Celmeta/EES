@@ -28,7 +28,7 @@
     justify-content: center;
     width: 50px;
     cursor: pointer;
-    background-color: rgb(233, 233, 233);
+    background-color: rgb(163, 163, 163);
     transition: opacity 0.2s, background-color 0.4s;
 
     img {
@@ -37,7 +37,7 @@
   }
 
   .move-buttons:disabled {
-    background-color: rgb(255, 162, 162);
+    background-color: $rosewood-color; 
   }
 
   .move-buttons:active {

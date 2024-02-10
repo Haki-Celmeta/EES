@@ -1,9 +1,9 @@
-import React, { useEffect, useState, useRef } from "react";
+import React from "react";
 import { Link, useLocation } from "react-router-dom";
 
 const Links = () => {
   const location = useLocation();
-  
+
   return (
     <nav>
       <ul>

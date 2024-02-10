@@ -1,0 +1,117 @@
+@import "../../assets/styles/variables";
+@import "../../assets/styles/mixins";
+
+.product-page-container {
+  padding: 3rem 6rem;
+  margin-top: 16rem;
+  @include displayFlex(row);
+  margin-left: 16rem;
+  margin-right: 16rem;
+  border-radius: 16px;
+
+  .image-description-container {
+    width: 60%;
+    @include displayFlex(column);
+    align-items: center;
+
+    img {
+      width: 400px;
+      border-radius: 16px;
+    }
+
+    p {
+      font-size: 1rem;
+      color: rgb(58, 58, 58);
+      margin-top: 2rem;
+    }
+  }
+
+  .product-info-detail-container {    
+    width: 40%;
+    @include displayFlex(column);
+
+    h1 {
+      font-size: 2rem;
+    }
+
+    .product-id {
+      font-size: 1.25rem;
+      color: rgb(97, 97, 97);
+    }
+
+    .product-price {
+      font-size: 1.5rem;
+      color: $rosewood-color;
+      padding: 1rem 0rem;
+    }
+
+    .quantity-container {
+      @include displayFlex(column);
+
+      label {
+        font-size: 1.25rem;
+      }
+
+      input {
+        width: 150px;
+        font-size: 1.25rem;
+        padding: 0.5rem 1rem;
+        outline: none;
+        border: 1px solid rgb(145, 145, 145);
+        background-color: transparent;
+        margin-top: 0.5rem;
+      }
+
+      input:focus {
+        border: 1px solid rgb(68, 68, 68);
+      }
+    }
+
+    .add-to-cart-btn {
+      @include button(1.1rem, $rosewood-color, #fff);
+      padding: 1rem;
+      margin: 2rem 0rem 1rem 0rem;
+    }
+
+    .add-to-cart-btn:active {
+      opacity: 0.5;
+    }
+
+    .buy-now-btn {
+      background-color: black;
+      color: #fff;
+      font-size: 1.1rem;
+      border: 1px solid black;
+      padding: 1rem;
+      transition: 0.2s;
+    }
+
+    .buy-now-btn:hover {
+      background-color: transparent;
+      color: black;
+    }
+  }
+}
+
+@media (max-width: 1057px) {
+  .product-page-container {
+    margin-left: 1rem;
+    margin-right: 1rem;
+
+    .image-description-container {
+      width: 100%;
+    }
+
+    .product-info-detail-container {
+      width: 100%;
+      margin-top: 2rem;
+    }
+  }
+}
+
+@media (max-width: 500px) {
+  .product-page-container {
+    flex-direction: column;
+    padding: 0rem;
+  }
+}

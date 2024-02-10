@@ -27,6 +27,7 @@
     .div-form-container {
       @include displayFlex(column);
       width: 100%;
+      transition: 0.4s;
 
       label {
         color: rgb(87, 87, 87);
@@ -40,10 +41,16 @@
         padding: 0.5rem 1rem;
         background-color: transparent;
         outline: none;
+        transition: 0.2s;
       }
 
       input:focus {
         border-bottom: 1px solid $licorice-color;
+      }
+
+      .error {
+        margin-top: 0.25rem;
+        color: rgb(199, 52, 52);
       }
     }
 

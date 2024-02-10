@@ -2,6 +2,7 @@ import React from "react";
 import cameras from "../Data/cameras";
 import Product from "./Single-product";
 import "./_all-products.scss";
+import { Link } from "react-router-dom";
 
 const AllProducts = () => {
   return (
@@ -14,8 +15,8 @@ const AllProducts = () => {
         </div>
       </div>
       <div className="products-container">
-        {cameras.map(({ name, price, megapixel, imageSrc }) => (
-          <Product name={name} price={price} megapixel={megapixel} imageSrc={imageSrc} />
+        {cameras.map(({ id, name, price, megapixel, imageSrc }) => (
+          <Link to={`/shop/${name}`}><Product key={id} name={name} price={price} megapixel={megapixel} imageSrc={imageSrc} /></Link>
         ))}
       </div>
     </div>

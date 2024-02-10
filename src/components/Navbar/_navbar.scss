@@ -55,13 +55,37 @@
     align-items: center;
     gap: 2rem;
 
-    img {
-      width: 40px;
-    }
-
     span {
+      display: flex;
+      align-items: center;
+      position: relative;
+      flex-direction: column;
       font-size: 1.2rem;
       font-weight: 500;
+      padding: 0.5rem;
+      cursor: pointer;
+      transition: 0.4s;
+    }
+
+    span::after {
+      content: "";
+      position: absolute;
+      bottom: 0;
+      width: 0px;
+      height: 3px;
+      background-color: rgb(182, 182, 182);
+      transition: all 0.4s, background-color 1s;
+      opacity: 0;
+    }
+
+    span:hover::after { 
+      opacity: 1;
+      width: 100%;
+      background-color: $rosewood-color;
+    }
+
+    .cart-container {
+      @include displayFlex(row);
     }
   }
 }
